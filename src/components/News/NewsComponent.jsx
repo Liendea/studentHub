@@ -2,7 +2,7 @@ import NewsCard from "./Newscard/NewsCard";
 import { useEffect, useState } from "react";
 import ResponsiveGrid from "../Grid/ResponsiveGrid";
 import Grid from "@mui/material/Grid";
-import Typography from "@mui/material";
+import Typography from "@mui/material/Typography ";
 import Box from "@mui/material/Box";
 
 function NewsComponent() {
