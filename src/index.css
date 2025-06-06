@@ -11,8 +11,7 @@ html {
 }
 #root {
   background: #000000;
-
-  font-family: "Geist";
+  font-family: "Geist", "sans serif";
   padding: 0 2rem;
 }
 

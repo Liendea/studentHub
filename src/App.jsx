@@ -8,7 +8,8 @@ import RouteMap from "./RouteMap.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { grey } from "@mui/material/colors";
-import { Box } from "@mui/material";
+import Box from "@mui/material/Box";
+import mobileBackground from "./Images/mobileBackground.png";
 
 const theme = createTheme({
   palette: {
@@ -44,7 +45,7 @@ const theme = createTheme({
 function App() {
   const location = useLocation();
   const isHome = location.pathname === "/";
-  const isNews = location.pathname === "/news";
+
   const [isMobileView, setIsMobileView] = useState(window.innerWidth < 900);
 
   useEffect(() => {
@@ -88,7 +89,7 @@ function App() {
                   }}
                 >
                   <img
-                    src="/assets/images/mobileBackground.png"
+                    src={mobileBackground}
                     alt="Background"
                     style={{
                       width: "clamp(600px, 100vw, 1200px)",

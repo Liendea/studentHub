@@ -39,12 +39,27 @@ function NewsComponent() {
       <Typography
         variant="h3"
         color="secondary"
-        sx={{ textAlign: "center", my: "10rem" }}
+        sx={{
+          textAlign: "center",
+          my: "10rem",
+          fontSize: {
+            xs: "2.5rem", // mobil
+            sm: "2.5rem", // små tablets
+            md: "2.5rem", // laptops
+            lg: "3rem", // stora skärmar
+          },
+        }}
       >
         Our latest news
       </Typography>
       {isLoading ? (
-        <Box sx={{ display: "flex", justifyContent: "center" }}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "10rem",
+          }}
+        >
           <span className="loader"></span>
         </Box>
       ) : (

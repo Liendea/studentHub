@@ -9,7 +9,10 @@ import Stack from "@mui/material/Stack";
 
 function NewsCard({ data }) {
   return (
-    <Box sx={{ width: { xs: "284px", sm: "284px", md: "384px" } }}>
+    <Box
+      component="article"
+      sx={{ width: { xs: "284px", sm: "284px", md: "384px" } }}
+    >
       <Card>
         <CardActionArea>
           <CardContent>

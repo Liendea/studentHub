@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import logo from "../../Images/logo.svg";
 
 function Logo() {
   return (
     <Link to="/">
-      <img src="/assets/images/logo.svg" alt="logo" />{" "}
+      <img src={logo} alt="logo" />{" "}
     </Link>
   );
 }
