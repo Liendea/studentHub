@@ -3,7 +3,6 @@ import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardActionArea from "@mui/material/CardActionArea";
-import CardMedia from "@mui/material/CardMedia";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
