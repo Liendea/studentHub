@@ -60,7 +60,7 @@ function App() {
   const HeaderAndNav = (
     <header className="d-flex justify-content-between align-items-center">
       <Logo />
-      <Navigation />
+      <Navigation isMobileView={isMobileView} isHome={isHome} />
     </header>
   );
 

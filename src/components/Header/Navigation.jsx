@@ -1,32 +1,30 @@
-import { Link as RouterLink } from "react-router-dom";
-import Link from "@mui/material/Link";
+import Drawer from "@mui/material/Drawer";
+import DesktopNavbar from "./DesktopNavbar";
+import { Box } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import Links from "./Links";
+import { useState } from "react";
 
-function Navigation() {
+function Navigation({ isMobileView, isHome }) {
+  const [isDrawerOpen, setIsDraweropen] = useState(false);
+
   return (
-    <div className="navigation bg-light rounded-5 w-25 d-flex ms-auto">
-      <ul className="nav justify-content-center mx-auto">
-        <li className="nav-item">
-          <Link
-            component={RouterLink}
-            to="/"
-            className="nav-link"
-            color="primary"
-          >
-            Home
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link component={RouterLink} to="/news" className="nav-link">
-            News
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link component={RouterLink} to="/courses" className="nav-link">
-            Courses
-          </Link>
-        </li>
-      </ul>
-    </div>
+    <>
+      {isMobileView ? (
+        <Drawer
+          anchor="right"
+          open={isDrawerOpen}
+          onClose={() => setIsDraweropen}
+        >
+          <Box p={2} width="250px" textAlign="center" role="presentation">
+            <Typography>Mobile menu </Typography>
+            <Links></Links>
+          </Box>
+        </Drawer>
+      ) : (
+        <DesktopNavbar isHome={isHome} />
+      )}
+    </>
   );
 }
 

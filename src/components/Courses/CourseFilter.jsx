@@ -19,19 +19,20 @@ export default function CourseFilter() {
 
   return (
     <Stack
-      direction={{ xs: "row", sm: "row" }}
+      direction={{ xs: "column", sm: "row" }}
       spacing={{ xs: 0, sm: 2, md: 4 }}
       sx={{
-        flexDirection: { xs: "column", sm: "row", md: "row" },
-        justifyContent: { xs: "flex-start", md: "flex-end" },
-        alignItems: { xs: "flex-start", md: "flex-end" },
-
-        borderRadius: "20px",
-        paddingLeft: { xs: "1rem", md: "3rem" },
-        paddingRight: "1rem",
-        wrap: "wrap",
-        marginTop: "2rem",
-        backgroundColor: "primary.main",
+        justifyContent: { xs: "flex-start", md: "center" },
+        alignItems: { xs: "center", md: "center" },
+        px: { xs: "1rem", md: "3rem" },
+        mt: "2rem",
+        mr: { md: "2rem" },
+        ml: { md: "auto" },
+        backgroundColor: "black",
+        minHeight: "50px",
+        border: { xs: "none", sm: "1px solid white", md: "1px solid white" },
+        borderRadius: "30px",
+        svg: { color: "white" },
       }}
     >
       {/* Område */}
@@ -43,12 +44,13 @@ export default function CourseFilter() {
           onChange={(e) => handleChange("area", e.target.value)}
           sx={{
             fontSize: "14px",
-            paddingY: 0.5,
+
             minHeight: "32px",
             color: "white",
             textAlign: "center",
           }}
           IconComponent={ExpandMoreIcon}
+          disableUnderline
         >
           <MenuItem value="">Område</MenuItem>
           <MenuItem value="webbutveckling" sx={{ fontSize: "15px" }}>
@@ -76,9 +78,10 @@ export default function CourseFilter() {
           label="Pris"
           onChange={(e) => handleChange("price", e.target.value)}
           IconComponent={ExpandMoreIcon}
+          disableUnderline
           sx={{
             fontSize: "14px",
-            paddingY: 0.5,
+
             minHeight: "32px",
             color: "white",
             textAlign: "center",
@@ -110,9 +113,9 @@ export default function CourseFilter() {
           label="Längd"
           onChange={(e) => handleChange("duration", e.target.value)}
           IconComponent={ExpandMoreIcon}
+          disableUnderline
           sx={{
             fontSize: "14px",
-            paddingY: 0.5,
             minHeight: "32px",
             color: "white",
             textAlign: "center",

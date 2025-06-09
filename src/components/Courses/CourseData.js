@@ -7,7 +7,7 @@ import rectangle26 from "../../Images/Rectangle26.webp";
 import rectangle27 from "../../Images/Rectangle27.webp";
 import rectangle28 from "../../Images/Rectangle28.webp";
 import rectangle29 from "../../Images/Rectangle29.webp";
-import rectangle30 from "../../Images/Rectangle30.webp";
+import rectangle20 from "../../Images/Rectangle20.webp";
 
 const courses = [
   {
@@ -78,7 +78,7 @@ const courses = [
     title: "Webbtillgänglighet",
     description:
       "Lär dig göra webbplatser och appar tillgängliga för alla användare, inklusive personer med funktionsnedsättningar.",
-    image: rectangle30,
+    image: rectangle20,
   },
 ];
 
