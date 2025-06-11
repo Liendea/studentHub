@@ -73,6 +73,7 @@ function MobileLinks({ setIsDrawerOpen }) {
           component={RouterLink}
           to="/my-courses"
           className="nav-link"
+          onClick={() => setIsDrawerOpen(false)}
           sx={{
             fontSize: "1.2rem",
             color: "primary",

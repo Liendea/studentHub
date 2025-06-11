@@ -23,6 +23,7 @@ function NewsComponent() {
           subject: article.tag_list[1],
           name: article.user.name,
           profileImg: article.user.profile_image,
+          url: article.url,
         }));
 
         setNews(filteredData);

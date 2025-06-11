@@ -15,15 +15,15 @@ function MyCoursesComponent() {
   }
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box my="5rem" sx={{ width: "100%" }}>
       <Box textAlign="center" my="3rem">
-        <Typography variant="h5" gutterBottom color="secondary">
+        <Typography my="5rem" variant="h5" gutterBottom color="secondary">
           Registrerade kurser
         </Typography>
       </Box>
 
       {!registrations || registrations.length === 0 ? (
-        <Typography color="secondary" textAlign="center">
+        <Typography my="5rem" color="secondary" textAlign="center">
           Du har inga registrerade kurser ännu.
         </Typography>
       ) : (

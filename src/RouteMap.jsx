@@ -4,6 +4,7 @@ import News from "./Pages/News";
 import Courses from "./Pages/Courses";
 import MyCourses from "./Pages/MyCourses";
 import CourseInfo from "./components/Courses/CourseInfo";
+import Register from "./Pages/Register";
 
 function RouteMap() {
   return (
@@ -13,6 +14,7 @@ function RouteMap() {
       <Route path="/courses" element={<Courses />} />
       <Route path="/courses/:courseId" element={<CourseInfo />} />
       <Route path="/my-courses" element={<MyCourses />} />
+      <Route path="/register" element={<Register />} />
     </Routes>
   );
 }

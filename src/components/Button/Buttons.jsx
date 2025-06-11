@@ -6,6 +6,7 @@ export default function Buttons({
   color = "primary",
   sx,
   onClick,
+  disabled,
 }) {
   return (
     <>
@@ -15,6 +16,7 @@ export default function Buttons({
         onClick={onClick}
         sx={sx}
         disableElevation
+        disabled={disabled}
       >
         {children}
       </Button>

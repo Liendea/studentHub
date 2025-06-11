@@ -13,9 +13,13 @@ import { useContext } from "react";
 import RegistrationContext from "../../context/RegistrationContext";
 
 function CourseInfo() {
-  const { registerToCourse } = useContext(RegistrationContext);
+  const { registerToCourse, registrations } = useContext(RegistrationContext);
   const { courseId } = useParams(); // hämta id från url
   const course = courses.find((c) => String(c.id) === courseId);
+
+  const isAlreadyRegistered = registrations.some(
+    (r) => r.courseId === course.id
+  );
 
   // State för modal och input
   const [open, setOpen] = useState(false);
@@ -89,11 +93,28 @@ function CourseInfo() {
         </nav>
       </Box>
 
-      <Box sx={{ width: "100%", height: "auto", py: "4rem" }}>
+      <Box
+        sx={{
+          width: {
+            sx: "100%",
+            sm: "100%",
+            md: "100%",
+          },
+          height: "auto",
+          py: "4rem",
+          px: "1rem",
+
+          mx: "auto",
+        }}
+      >
         <Card
           sx={{
             border: "1px solid white",
-            width: "80%",
+            width: {
+              sx: "90%",
+              sm: "80%",
+              md: "60%",
+            },
             height: "auto",
             mx: "auto",
             my: "2rem",
@@ -193,6 +214,7 @@ function CourseInfo() {
             >
               <Buttons
                 onClick={handleOpenDialog}
+                disabled={isAlreadyRegistered}
                 variant="contained"
                 sx={{
                   fontSize: {
@@ -205,7 +227,7 @@ function CourseInfo() {
                   },
                 }}
               >
-                Registrera
+                {isAlreadyRegistered ? "Redan registrerad" : "Registrera"}
               </Buttons>
             </div>
           </CardActions>

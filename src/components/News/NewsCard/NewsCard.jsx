@@ -8,13 +8,19 @@ import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 
 function NewsCard({ data }) {
+  const handleCardClick = () => {
+    if (data.url) {
+      window.open(data.url, "_blank");
+    }
+  };
+
   return (
     <Box
       component="article"
       sx={{ width: { xs: "284px", sm: "284px", md: "384px" } }}
     >
       <Card>
-        <CardActionArea>
+        <CardActionArea onClick={handleCardClick}>
           <CardContent>
             <Box
               sx={{

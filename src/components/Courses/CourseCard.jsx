@@ -13,10 +13,15 @@ import { useContext } from "react";
 import RegistrationContext from "../../context/RegistrationContext";
 
 export default function CourseCard({ courseId }) {
-  const { registerToCourse } = useContext(RegistrationContext);
+  const { registerToCourse, registrations } = useContext(RegistrationContext);
 
   const course = courses.find((c) => c.id === courseId);
-  const navigate = useNavigate(); // <- detta behövs
+
+  const isAlreadyRegistered = registrations.some(
+    (r) => r.courseId === course.id
+  );
+
+  const navigate = useNavigate();
 
   const maxLength = 60; // Max antal tecken att visa innan trunkering
 
@@ -151,6 +156,7 @@ export default function CourseCard({ courseId }) {
             </Buttons>
             <Buttons
               onClick={handleOpenDialog}
+              disabled={isAlreadyRegistered}
               variant="contained"
               sx={{
                 fontSize: {
@@ -163,7 +169,7 @@ export default function CourseCard({ courseId }) {
                 },
               }}
             >
-              Registrera
+              {isAlreadyRegistered ? "Redan registrerad" : "Registrera"}
             </Buttons>
           </div>
         </CardActions>
