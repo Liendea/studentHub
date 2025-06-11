@@ -169,7 +169,7 @@ export default function CourseCard({ courseId }) {
                 },
               }}
             >
-              {isAlreadyRegistered ? "Redan registrerad" : "Registrera"}
+              {isAlreadyRegistered ? "Registrerad" : "Registrera"}
             </Buttons>
           </div>
         </CardActions>

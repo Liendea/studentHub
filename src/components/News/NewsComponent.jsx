@@ -1,4 +1,4 @@
-import NewsCard from "./Newscard/NewsCard";
+import NewsCard from "./NewsCard/NewsCard";
 import { useEffect, useState } from "react";
 import ResponsiveGrid from "../Grid/ResponsiveGrid";
 import Grid from "@mui/material/Grid";
@@ -9,6 +9,7 @@ function NewsComponent() {
   const [news, setNews] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
+  // Hämta news fråm API
   useEffect(() => {
     setIsLoading(true);
     fetch("https://dev.to/api/articles")
