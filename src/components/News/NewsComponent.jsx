@@ -27,7 +27,6 @@ function NewsComponent() {
 
         setNews(filteredData);
         setIsLoading(false);
-        console.log(filteredData);
       })
       .catch((error) => {
         console.error("API anrop misslyckades, ", error);

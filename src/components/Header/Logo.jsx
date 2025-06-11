@@ -1,10 +1,20 @@
 import { Link } from "react-router-dom";
 import logo from "../../Images/logo.svg";
+import logo_black from "../../Images/logo_black.svg";
 
-function Logo() {
+function Logo({ color, isDrawerOpen, setIsDrawerOpen, isMobileView }) {
+  const handleLogoClick = () => {
+    if (isDrawerOpen) {
+      setIsDrawerOpen(false);
+    }
+  };
   return (
-    <Link to="/">
-      <img src={logo} alt="logo" />{" "}
+    <Link to="/" onClick={handleLogoClick}>
+      <img
+        src={color === "black" ? logo_black : logo}
+        alt="logo"
+        style={{ width: isMobileView ? "80%" : "100%" }}
+      />
     </Link>
   );
 }

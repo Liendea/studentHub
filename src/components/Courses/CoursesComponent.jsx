@@ -1,8 +1,8 @@
 import Typography from "@mui/material/Typography";
 import ResponsiveGrid from "../Grid/ResponsiveGrid";
 import Box from "@mui/material/Box";
-import CourseFilter from "./CourseFilter";
-import courses from "./CourseData";
+import CourseFilter from "./Filter/CourseFilter";
+import courses from "./CourseData/CourseData";
 import Grid from "@mui/material/Grid";
 import CourseCard from "./CourseCard";
 
@@ -19,10 +19,10 @@ function CoursesComponent() {
           flexDirection: "column",
           alignItems: {
             xs: "center",
-            sm: "center",
-            md: "flex-start",
+            md: "center",
           },
           marginBottom: "2rem",
+          marginTop: "5rem",
         }}
       >
         {/* Heading & bodytext Box*/}
@@ -34,7 +34,7 @@ function CoursesComponent() {
             wrap: "wrap",
             margin: "0",
             marginBottom: "1rem",
-            textAlign: { xs: "center", md: "left" },
+            textAlign: { xs: "center", md: "center" },
           }}
         >
           <Typography
@@ -69,11 +69,7 @@ function CoursesComponent() {
       <ResponsiveGrid>
         {courses.map((course) => (
           <Grid size={{ xs: 4, sm: 4, md: 4, lg: 3 }} key={course.id}>
-            <CourseCard
-              title={course.title}
-              description={course.description}
-              image={course.image}
-            />
+            <CourseCard courseId={course.id} />
           </Grid>
         ))}
       </ResponsiveGrid>

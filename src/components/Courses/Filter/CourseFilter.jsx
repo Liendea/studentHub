@@ -22,12 +22,12 @@ export default function CourseFilter() {
       direction={{ xs: "column", sm: "row" }}
       spacing={{ xs: 0, sm: 2, md: 4 }}
       sx={{
-        justifyContent: { xs: "flex-start", md: "center" },
+        justifyContent: { xs: "center", md: "center" },
         alignItems: { xs: "center", md: "center" },
         px: { xs: "1rem", md: "3rem" },
         mt: "2rem",
         mr: { md: "2rem" },
-        ml: { md: "auto" },
+        ml: { md: "2rem" },
         backgroundColor: "black",
         minHeight: "50px",
         border: { xs: "none", sm: "1px solid white", md: "1px solid white" },

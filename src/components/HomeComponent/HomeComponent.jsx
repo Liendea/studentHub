@@ -32,7 +32,7 @@ function HomeComponent() {
         color="secondary"
         sx={{
           fontSize: {
-            xs: "2.5rem", // mobil
+            xs: "2rem", // mobil
             sm: "2.5rem", // små tablets
             md: "2.5rem", // laptops
             lg: "3rem", // stora skärmar

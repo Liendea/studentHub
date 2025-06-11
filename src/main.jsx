@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import { RegistrationProvider } from "./context/RegistrationContext";
 
 import { BrowserRouter } from "react-router-dom";
 
@@ -12,7 +13,9 @@ createRoot(document.getElementById("root")).render(
     <BrowserRouter
       basename={import.meta.env.MODE === "production" ? "/studentHub" : ""}
     >
-      <App />
+      <RegistrationProvider>
+        <App />
+      </RegistrationProvider>
     </BrowserRouter>
   </StrictMode>
 );

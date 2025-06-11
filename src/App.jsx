@@ -1,13 +1,12 @@
 import "./App.css";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-
-import Navigation from "./components/Header/Navigation.jsx";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { grey } from "@mui/material/colors";
+import Navigation from "./components/Header/Navigation/Navigation.jsx";
 import Logo from "./components/Header/Logo.jsx";
 import RouteMap from "./RouteMap.jsx";
 import Footer from "./components/Footer/Footer.jsx";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { grey } from "@mui/material/colors";
 import Box from "@mui/material/Box";
 import mobileBackground from "./Images/mobileBackground.png";
 
@@ -58,16 +57,16 @@ function App() {
   }, []);
 
   const HeaderAndNav = (
-    <header className="d-flex justify-content-between align-items-center">
-      <Logo />
+    <header className="d-flex justify-content-between align-items-center bg-black">
+      <Logo isMobileView={isMobileView} />
       <Navigation isMobileView={isMobileView} isHome={isHome} />
     </header>
   );
 
   const MainContent = (
-    <main>
+    <Box component="main">
       <RouteMap />
-    </main>
+    </Box>
   );
 
   return (
