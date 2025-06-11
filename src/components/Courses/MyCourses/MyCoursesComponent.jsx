@@ -27,7 +27,7 @@ function MyCoursesComponent() {
           Du har inga registrerade kurser ännu.
         </Typography>
       ) : (
-        <div className="container text-center">
+        <div className="container">
           <div className="row">
             {registrations.map((reg) => (
               <div
