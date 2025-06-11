@@ -68,7 +68,28 @@ function MobileLinks({ setIsDrawerOpen }) {
           Courses
         </Link>
       </li>
-      <li className="nav-item mx-2">
+      <li className="nav-item mx-1 my-2">
+        <Link
+          component={RouterLink}
+          to="/register"
+          className="nav-link"
+          onClick={() => setIsDrawerOpen(false)}
+          sx={{
+            fontSize: "1.2rem",
+            color: "primary",
+            textDecoration: "none",
+            "&:hover": {
+              color: "#5D75FF",
+              textDecoration: "none",
+              fontWeight: "600",
+            },
+          }}
+        >
+          Register
+        </Link>
+      </li>
+
+      <li className="nav-item mx-1">
         <Link
           component={RouterLink}
           to="/my-courses"
