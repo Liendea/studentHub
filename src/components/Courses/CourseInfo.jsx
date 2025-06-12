@@ -36,7 +36,16 @@ function CourseInfo() {
   };
 
   const handleRegister = () => {
-    registerToCourse(course.id, course.title, name, email, course.nivå);
+    registerToCourse(
+      course.id,
+      course.title,
+      course.price,
+      course.duration,
+      course.nivå,
+      course.image,
+      name,
+      email
+    );
     handleCloseDialog();
   };
   // Hantera om kursen inte hittas
