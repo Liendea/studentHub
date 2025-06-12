@@ -1,4 +1,3 @@
-import { useState } from "react";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
@@ -6,17 +5,10 @@ import Stack from "@mui/material/Stack";
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-export default function CourseFilter() {
-  const [filters, setFilters] = useState({
-    area: "",
-    price: "",
-    duration: "",
-  });
-
+export default function CourseFilter({ filters, setFilters }) {
   const handleChange = (filterType, value) => {
-    setFilters({ ...filters, [filterType]: value });
+    setFilters((prev) => ({ ...prev, [filterType]: value }));
   };
-
   return (
     <Stack
       direction={{ xs: "column", sm: "row" }}
@@ -59,14 +51,20 @@ export default function CourseFilter() {
           <MenuItem value="design" sx={{ fontSize: "15px" }}>
             Design
           </MenuItem>
-          <MenuItem value="marketing" sx={{ fontSize: "15px" }}>
-            Marknadsföring
+          <MenuItem value="Databashantering" sx={{ fontSize: "15px" }}>
+            Databashantering
           </MenuItem>
-          <MenuItem value="data" sx={{ fontSize: "15px" }}>
-            Data & Analys
+          <MenuItem value="DevOps" sx={{ fontSize: "15px" }}>
+            DevOps
           </MenuItem>
-          <MenuItem value="business" sx={{ fontSize: "15px" }}>
-            Företagsledning
+          <MenuItem value="AI & Data Science" sx={{ fontSize: "15px" }}>
+            AI & Data Science
+          </MenuItem>
+          <MenuItem value="Molnteknik" sx={{ fontSize: "15px" }}>
+            Molnteknik
+          </MenuItem>
+          <MenuItem value="Cybersäkerhet" sx={{ fontSize: "15px" }}>
+            Cybersäkerhet
           </MenuItem>
         </Select>
       </FormControl>
@@ -91,17 +89,17 @@ export default function CourseFilter() {
           <MenuItem value="free" sx={{ fontSize: "15px" }}>
             Gratis
           </MenuItem>
-          <MenuItem value="0-500" sx={{ fontSize: "15px" }}>
-            0-500 kr
+          <MenuItem value="0-100" sx={{ fontSize: "15px" }}>
+            0-100€
           </MenuItem>
-          <MenuItem value="500-1200" sx={{ fontSize: "15px" }}>
-            500-1200 kr
+          <MenuItem value="100-300" sx={{ fontSize: "15px" }}>
+            100-300€
           </MenuItem>
-          <MenuItem value="1200-2000" sx={{ fontSize: "15px" }}>
-            1200-2000 kr
+          <MenuItem value="300-500" sx={{ fontSize: "15px" }}>
+            300-500€
           </MenuItem>
-          <MenuItem value="2000+" sx={{ fontSize: "15px" }}>
-            2000+ kr
+          <MenuItem value="500+" sx={{ fontSize: "15px" }}>
+            500€ +
           </MenuItem>
         </Select>
       </FormControl>
@@ -122,20 +120,20 @@ export default function CourseFilter() {
           }}
         >
           <MenuItem value="">Längd</MenuItem>
-          <MenuItem value="1-2v" sx={{ fontSize: "15px" }}>
-            1-2 veckor
+          <MenuItem value="1-3v" sx={{ fontSize: "15px" }}>
+            1-3 veckor
           </MenuItem>
-          <MenuItem value="3-4v" sx={{ fontSize: "15px" }}>
-            3-4 veckor
+          <MenuItem value="4-7v" sx={{ fontSize: "15px" }}>
+            4-7 veckor
           </MenuItem>
-          <MenuItem value="1-2m" sx={{ fontSize: "15px" }}>
-            1-2 månader
+          <MenuItem value="8-11v" sx={{ fontSize: "15px" }}>
+            8-11 veckor
           </MenuItem>
-          <MenuItem value="3-6m" sx={{ fontSize: "15px" }}>
-            3-6 månader
+          <MenuItem value="12-15v" sx={{ fontSize: "15px" }}>
+            12-15 veckor
           </MenuItem>
-          <MenuItem value="6m+" sx={{ fontSize: "15px" }}>
-            6+ månader
+          <MenuItem value="15v+" sx={{ fontSize: "15px" }}>
+            15 veckor +
           </MenuItem>
         </Select>
       </FormControl>

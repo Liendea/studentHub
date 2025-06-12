@@ -1,3 +1,6 @@
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useContext } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
@@ -5,11 +8,8 @@ import CardActionArea from "@mui/material/CardActionArea";
 import CardActions from "@mui/material/CardActions";
 import Box from "@mui/material/Box";
 import Buttons from "../Button/Buttons";
-import { useNavigate } from "react-router-dom";
 import courses from "./CourseData/CourseData";
-import { useState } from "react";
 import RegistrationModal from "./RegistrationModal";
-import { useContext } from "react";
 import RegistrationContext from "../../context/RegistrationContext";
 
 export default function CourseCard({ courseId }) {
@@ -35,7 +35,7 @@ export default function CourseCard({ courseId }) {
     navigate(`/courses/${courseId}`);
   }
 
-  const [open, setOpen] = useState(false); // styr popup
+  const [open, setOpen] = useState(false); // pop up
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 

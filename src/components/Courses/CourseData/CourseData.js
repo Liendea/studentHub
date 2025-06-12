@@ -1,3 +1,4 @@
+import rectangle20 from "../../../Images/Rectangle20.webp";
 import rectangle21 from "../../../Images/rectangle21.webp";
 import rectangle22 from "../../../Images/Rectangle22.webp";
 import rectangle23 from "../../../Images/Rectangle23.webp";
@@ -7,7 +8,11 @@ import rectangle26 from "../../../Images/Rectangle26.webp";
 import rectangle27 from "../../../Images/Rectangle27.webp";
 import rectangle28 from "../../../Images/Rectangle28.webp";
 import rectangle29 from "../../../Images/Rectangle29.webp";
-import rectangle20 from "../../../Images/Rectangle20.webp";
+import rectangle30 from "../../../Images/Rectangle30.webp";
+import rectangle31 from "../../../Images/Rectangle31.webp";
+import rectangle32 from "../../../Images/Rectangle32.webp";
+import rectangle33 from "../../../Images/Rectangle33.webp";
+import rectangle34 from "../../../Images/Rectangle34.webp";
 
 const courses = [
   {
@@ -22,6 +27,7 @@ const courses = [
     location: "Distans",
     price: "320€",
     nivå: "Intermediate",
+    ämne: "UX/UI-design",
   },
   {
     id: 2,
@@ -35,6 +41,7 @@ const courses = [
     location: "Distans",
     price: "180€",
     nivå: "Nybörjare",
+    ämne: "UX/UI-design",
   },
   {
     id: 3,
@@ -48,6 +55,7 @@ const courses = [
     location: "Distans",
     price: "120€",
     nivå: "Nybörjare",
+    ämne: "Webbutveckling",
   },
   {
     id: 4,
@@ -61,6 +69,7 @@ const courses = [
     location: "Distans",
     price: "220€",
     nivå: "Nybörjare",
+    ämne: "Webbutveckling",
   },
   {
     id: 5,
@@ -74,6 +83,7 @@ const courses = [
     location: "Distans",
     price: "400€",
     nivå: "Intermediate",
+    ämne: "Webbutveckling",
   },
   {
     id: 6,
@@ -87,6 +97,7 @@ const courses = [
     location: "Distans",
     price: "280€",
     nivå: "Avancerad",
+    ämne: "UX/UI-design",
   },
   {
     id: 7,
@@ -100,6 +111,7 @@ const courses = [
     location: "Distans",
     price: "350€",
     nivå: "Intermediate",
+    ämne: "Innovation & design thinking",
   },
   {
     id: 8,
@@ -111,8 +123,9 @@ const courses = [
     lärare: "Ryan Dahl",
     omLäraren: "Skapare av Node.js",
     location: "Distans",
-    price: "450€",
+    price: "650€",
     nivå: "Avancerad",
+    ämne: "Backendutveckling",
   },
   {
     id: 9,
@@ -126,6 +139,7 @@ const courses = [
     location: "Distans",
     price: "100€",
     nivå: "Nybörjare",
+    ämne: "Webbutveckling",
   },
   {
     id: 10,
@@ -139,6 +153,77 @@ const courses = [
     location: "Distans",
     price: "140€",
     nivå: "Intermediate",
+    ämne: "Webbutveckling",
+  },
+  {
+    id: 11,
+    title: "Cybersäkerhet för nybörjare",
+    description:
+      "Lär dig grunderna inom cybersäkerhet, inklusive nätverkssäkerhet, hotanalys och bästa praxis för att skydda data och system.",
+    image: rectangle30,
+    duration: "12 veckor",
+    lärare: "Bruce Schneier",
+    omLäraren: "Internationell expert inom IT-säkerhet",
+    location: "Distans",
+    price: "350€",
+    nivå: "Nybörjare",
+    ämne: "Cybersäkerhet",
+  },
+  {
+    id: 12,
+    title: "Introduktion till molnteknik",
+    description:
+      "Få en grundläggande förståelse för molntjänster, arkitektur och plattformar som AWS, Azure och Google Cloud.",
+    image: rectangle31,
+    duration: "10 veckor",
+    lärare: "Kelsey Hightower",
+    omLäraren: "Google Cloud expert och föreläsare",
+    location: "Distans",
+    price: "350€",
+    nivå: "Nybörjare",
+    ämne: "Molnteknik",
+  },
+  {
+    id: 13,
+    title: "AI & Maskininlärning",
+    description:
+      "En introduktion till artificiell intelligens och maskininlärning med praktiska exempel och grundläggande algoritmer.",
+    image: rectangle32,
+    duration: "16 veckor",
+    lärare: "Andrew Ng",
+    omLäraren: "AI-forskare och grundare av deeplearning.ai",
+    location: "Distans",
+    price: "550€",
+    nivå: "Intermediate",
+    ämne: "AI & Data Science",
+  },
+  {
+    id: 14,
+    title: "SQL & Databaser",
+    description:
+      "Lär dig att arbeta med relationsdatabaser, skriva effektiva SQL-frågor och hantera databasdesign och optimering.",
+    image: rectangle33,
+    duration: "8 veckor",
+    lärare: "Ben Forta",
+    omLäraren: "SQL-expert och författare",
+    location: "Distans",
+    price: "200€",
+    nivå: "Nybörjare",
+    ämne: "Databashantering",
+  },
+  {
+    id: 15,
+    title: "DevOps & CI/CD",
+    description:
+      "Utforska DevOps-principer och lär dig att sätta upp automatiserade pipelines för testning, deployment och leverans.",
+    image: rectangle34,
+    duration: "18 veckor",
+    lärare: "Gene Kim",
+    omLäraren: "Medförfattare till The Phoenix Project",
+    location: "Distans",
+    price: "500€",
+    nivå: "Intermediate",
+    ämne: "DevOps",
   },
 ];
 

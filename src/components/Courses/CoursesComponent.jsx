@@ -5,8 +5,19 @@ import CourseFilter from "./Filter/CourseFilter";
 import courses from "./CourseData/CourseData";
 import Grid from "@mui/material/Grid";
 import CourseCard from "./CourseCard";
+import { useState } from "react";
+import { filterCourses } from "./Filter/filterFunction";
 
 function CoursesComponent() {
+  // Filter funktion
+  const [filters, setFilters] = useState({
+    area: "",
+    price: "",
+    duration: "",
+  });
+
+  const filteredCourses = filterCourses(courses, filters);
+
   return (
     <>
       {/* Hela kurs sidan */}
@@ -62,12 +73,12 @@ function CoursesComponent() {
         </Box>
 
         {/*Filtrerings komponenet*/}
-        <CourseFilter />
+        <CourseFilter filters={filters} setFilters={setFilters} />
       </Box>
 
       {/* Grid */}
       <ResponsiveGrid>
-        {courses.map((course) => (
+        {filteredCourses.map((course) => (
           <Grid size={{ xs: 4, sm: 4, md: 4, lg: 3 }} key={course.id}>
             <CourseCard courseId={course.id} />
           </Grid>

@@ -1,45 +1,14 @@
 import "./App.css";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { grey } from "@mui/material/colors";
 import Navigation from "./components/Header/Navigation/Navigation.jsx";
 import Logo from "./components/Header/Logo.jsx";
 import RouteMap from "./RouteMap.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import Box from "@mui/material/Box";
 import mobileBackground from "./Images/mobileBackground.png";
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: grey[900],
-      light: grey[700],
-    },
-    secondary: {
-      main: "#ffffff",
-    },
-    text: {
-      primary: grey[900],
-      secondary: "#ffffff",
-    },
-  },
-  typography: {
-    h1: {
-      fontSize: "3rem",
-      fontWeight: 600,
-      color: "#ffffff",
-      lineHeight: 1.2,
-    },
-    subtitle1: {
-      fontSize: "18px",
-      fontWeight: 400,
-      color: "#ffffff",
-      lineHeight: 1.4,
-      opacity: 0.6,
-    },
-  },
-});
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./theme/theme";
 
 function App() {
   const location = useLocation();
